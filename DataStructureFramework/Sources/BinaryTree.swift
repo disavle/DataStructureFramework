@@ -4,9 +4,7 @@
 //
 //  Created by Dima Disavle on 12.02.2023.
 //
-
-import UIKit
-
+/// Нода дерева
 class Node<T> {
 
 	var value: T
@@ -17,15 +15,20 @@ class Node<T> {
 		self.value = value
 	}
 }
-
+/// Структура данных бинарное дерево
 public struct BinaryTree<T:Comparable> {
 
 	var root: Node<T>?
-
+	/// Содержит ли дерево искомый элемент
+	/// - Parameters:
+	///  - value: значение искомого элемента
+	/// - Returns: флаг результата поиска
 	public func search(_ value: T) -> Bool {
 		return preorderSearch(root, value: value)
 	}
-
+	/// Добавление элемента в дерево
+	/// - Parameters:
+	///  - value: значение элемента, которого нужно добавить
 	public mutating func append(_ value: T)
 	{
 		if (root == nil) {
@@ -52,7 +55,8 @@ public struct BinaryTree<T:Comparable> {
 			}
 		}
 	}
-
+	/// Печать дерева
+	/// - Returns: строку элементов дерева
 	public func printTree() -> String {
 		let result = preorderPrint(root, traverse: "")!
 		return String(result[..<result.index(before: result.endIndex)])
