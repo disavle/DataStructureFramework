@@ -9,7 +9,7 @@ let package = Package(
 	products: [
 		.library(
 			name: "DataStructureFramework",
-			targets: ["DataStructureFramework", "DataStructureFrameworkTests"]),
+			targets: ["DataStructureFramework"]),
 	],
 	dependencies: [],
 	targets: [
