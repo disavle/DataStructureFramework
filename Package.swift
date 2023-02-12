@@ -4,25 +4,23 @@
 import PackageDescription
 
 let package = Package(
-	name: "DSPackage",
+	name: "DataStructureFramework",
 	platforms: [.iOS(.v12)],
 	products: [
 		.library(
-			name: "DSPackage",
-			targets: ["DSPackage", "DataStructureFramework"]),
+			name: "DataStructureFramework",
+			targets: ["DataStructureFramework", "DataStructureFrameworkTests"]),
 	],
 	dependencies: [],
 	targets: [
 		.target(
-			name: "DSPackage",
-			dependencies: []),
-		.binaryTarget(
 			name: "DataStructureFramework",
-			path: "artifacts/DataStructureFramework.xcframework"
+			path: "DataStructureFramework/Sources"
 		),
 		.testTarget(
-			name: "DSPackageTests",
-			dependencies: ["DSPackage"]
+			name: "DataStructureFrameworkTests",
+			dependencies: ["DataStructureFramework"],
+			path: "DataStructureFrameworkTests/Sources"
 		),
 	]
 )

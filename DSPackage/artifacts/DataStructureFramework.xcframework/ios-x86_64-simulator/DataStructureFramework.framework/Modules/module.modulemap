@@ -1,4 +1,0 @@
-framework module DataStructureFramework {
-  header "DataStructureFramework-Swift.h"
-  requires objc
-}
