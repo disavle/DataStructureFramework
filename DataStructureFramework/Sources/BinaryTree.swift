@@ -19,6 +19,10 @@ class Node<T> {
 public struct BinaryTree<T:Comparable> {
 	// MARK: - Internal property
 	var root: Node<T>?
+
+	// MARK: - Life cycle
+	public init() { }
+
 	// MARK: - Public functions
 	/// Содержит ли дерево искомый элемент
 	/// - Parameters:
@@ -27,6 +31,7 @@ public struct BinaryTree<T:Comparable> {
 	public func search(_ value: T) -> Bool {
 		return preorderSearch(root, value: value)
 	}
+
 	/// Добавление элемента в дерево
 	/// - Parameters:
 	///  - value: значение элемента, которого нужно добавить
@@ -56,12 +61,14 @@ public struct BinaryTree<T:Comparable> {
 			}
 		}
 	}
+
 	/// Печать дерева
 	/// - Returns: строку элементов дерева
 	public func printTree() -> String {
 		let result = preorderPrint(root, traverse: "")!
 		return String(result[..<result.index(before: result.endIndex)])
 	}
+
 	// MARK: - Private functions
 	private func preorderSearch(_ start: Node<T>?, value: T) -> Bool {
 		if let start = start {

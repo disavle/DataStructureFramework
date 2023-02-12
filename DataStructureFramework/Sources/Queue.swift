@@ -10,7 +10,7 @@ import Foundation
 /// Структура данных очередь. FIFO
 public struct Queue<T: Comparable> {
 	// MARK: - Private property
-	private var data = [T]()
+	private var data: [T]
 
 	// MARK: - Public property
 	/// Проверка на пустоту
@@ -20,6 +20,11 @@ public struct Queue<T: Comparable> {
 	/// Возвращает элемент первый в очереди
 	public var peek: T? {
 		return data.first
+	}
+
+	// MARK: - Life cycle
+	public init() {
+		self.data = [T]()
 	}
 
 	// MARK: - Public function

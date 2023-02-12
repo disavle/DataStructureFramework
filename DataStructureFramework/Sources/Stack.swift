@@ -8,7 +8,7 @@
 // Структура данных стек. LIFO
 public struct Stack<T: Comparable> {
 // MARK: - Internal property
-	private(set) var data = [T]()
+	private(set) var data: [T]
 
 	// MARK: - Public property
 	/// Проверка на пустоту
@@ -22,6 +22,11 @@ public struct Stack<T: Comparable> {
 	/// Возвращает верхний элемент в стеке
 	public var top: T? {
 		data.last
+	}
+
+	// MARK: - Life cycle
+	public init() {
+		self.data = [T]()
 	}
 
 	// MARK: - Public function
