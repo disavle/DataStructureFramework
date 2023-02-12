@@ -6,19 +6,20 @@
 //
 /// Нода дерева
 class Node<T> {
-
+	// MARK: - Internal property
 	var value: T
 	var left: Node<T>?
 	var right: Node<T>?
-
+	// MARK: - Life cycle
 	internal init(value: T) {
 		self.value = value
 	}
 }
 /// Структура данных бинарное дерево
 public struct BinaryTree<T:Comparable> {
-
+	// MARK: - Internal property
 	var root: Node<T>?
+	// MARK: - Public functions
 	/// Содержит ли дерево искомый элемент
 	/// - Parameters:
 	///  - value: значение искомого элемента
@@ -61,7 +62,7 @@ public struct BinaryTree<T:Comparable> {
 		let result = preorderPrint(root, traverse: "")!
 		return String(result[..<result.index(before: result.endIndex)])
 	}
-
+	// MARK: - Private functions
 	private func preorderSearch(_ start: Node<T>?, value: T) -> Bool {
 		if let start = start {
 			if start.value == value {
