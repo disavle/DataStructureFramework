@@ -1,0 +1,42 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DataStructureFramework
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+public struct Stack<T> where T : Swift.Comparable {
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var count: Swift.Int {
+    get
+  }
+  public var top: T? {
+    get
+  }
+  public mutating func push(_ value: T)
+  public mutating func pop() -> T?
+}
+public struct Queue<T> where T : Swift.Comparable {
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var peek: T? {
+    get
+  }
+  public mutating func enqueue(_ value: T)
+  public func contains(_ value: T) -> Swift.Bool
+  public mutating func dequeue() -> T?
+}
+extension DataStructureFramework.Queue : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct BinaryTree<T> where T : Swift.Comparable {
+  public func search(_ value: T) -> Swift.Bool
+  public mutating func append(_ value: T)
+  public func printTree() -> Swift.String
+}
