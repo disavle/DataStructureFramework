@@ -1,13 +1,7 @@
 # ``DataStructureFramework``
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
+Фреймворк для работы с классическими структурами данных: бинарное дерево, очередь, стек
 
-## Overview
-
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
-
-## Topics
-
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
-
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
+## Ссылки на источники алгоритмов
+1. https://github.com/kodecocodes/swift-algorithm-club
+2. https://github.com/burakglobal/BinaryTree/blob/master/BinaryTree.swift
