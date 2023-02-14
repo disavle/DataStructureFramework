@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-	 name: Build for testing DSFramework
     runs-on: macos-latest
 
     steps:
