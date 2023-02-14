@@ -13,7 +13,7 @@ public struct Stack<T: Comparable> {
 	// MARK: - Public property
 	/// Проверка на пустоту
 	public var isEmpty: Bool {
-		true
+		data.isEmpty
 	}
 
 	public var count: Int {
