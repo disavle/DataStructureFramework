@@ -4,16 +4,17 @@
 name: Swift
 
 on:
-	pull_request:
-	branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-	build:
-	name: Build for testing DSFramework
-	runs-on: macos-latest
-	steps:
-		- uses: actions/checkout@v3
-		- name: Build
-			run: swift build -v
-		- name: Run tests
-			run: swift test -v
+  build:
+	 name: Build for testing DSFramework
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
