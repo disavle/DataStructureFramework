@@ -1,5 +1,6 @@
 # DataStructureFramework
 Framework for working with classic data structures 
+[![Swift](https://github.com/disavle/DataStructureFramework/actions/workflows/swift.yml/badge.svg?branch=main)](https://github.com/disavle/DataStructureFramework/actions/workflows/swift.yml)
 ## Installation
 ### Swift Package Manager
 [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
